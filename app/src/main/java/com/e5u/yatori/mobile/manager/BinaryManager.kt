@@ -2,6 +2,7 @@ package com.e5u.yatori.mobile.manager
 
 import android.content.Context
 import android.os.Build
+import com.e5u.yatori.mobile.R
 import java.io.File
 import java.io.FileOutputStream
 
@@ -63,9 +64,7 @@ class BinaryManager(private val context: Context) {
                 assetList.contains(assetName) -> assetName
                 assetList.contains(binaryName) -> binaryName
                 else -> return Result.failure(
-                    Exception(context.getString(
-                        com.e5u.yatori.mobile.R.string.error_binary_not_found
-                    ))
+                    Exception(context.getString(R.string.error_binary_not_found))
                 )
             }
 
@@ -79,9 +78,7 @@ class BinaryManager(private val context: Context) {
                 // Set executable permissions
                 if (!outputFile.setExecutable(true, false)) {
                     return Result.failure(
-                        Exception(context.getString(
-                            com.e5u.yatori.mobile.R.string.error_binary_permissions
-                        ))
+                        Exception(context.getString(R.string.error_binary_permissions))
                     )
                 }
                 
