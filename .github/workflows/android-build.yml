@@ -25,15 +25,47 @@ jobs:
         distribution: 'temurin'
         cache: gradle
         
-    - name: Grant execute permission for gradlew
-      run: chmod +x gradlew
-      
-    - name: Create dummy binary (for CI build)
+    - name: Set up Go
+      uses: actions/setup-go@v5
+      with:
+        go-version: '1.21'
+        
+    - name: Set up Android NDK
+      uses: nttld/setup-ndk@v1
+      with:
+        ndk-version: r25c
+        add-to-path: true
+        
+    - name: Clone yatori-go-core
+      run: |
+        cd ..
+        git clone https://github.com/e5u/yatori-go-core.git
+        
+    - name: Build yatori-go-console for ARM64
+      run: |
+        cd ../yatori-go-core
+        export CGO_ENABLED=1
+        export GOOS=android
+        export GOARCH=arm64
+        # Using linux-x86_64 toolchain (CI runs on ubuntu-latest) with API level 21 (Android 5.0)
+        export CC=$ANDROID_NDK_HOME/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android21-clang
+        go build -o yatori-go-console-arm64 -ldflags="-s -w" ./cmd/console
+        
+    - name: Copy binary to assets
       run: |
         mkdir -p app/src/main/assets
-        echo "#!/bin/sh" > app/src/main/assets/yatori-go-console
-        echo "echo 'Dummy binary for CI'" >> app/src/main/assets/yatori-go-console
+        cp ../yatori-go-core/yatori-go-console-arm64 app/src/main/assets/yatori-go-console
         chmod +x app/src/main/assets/yatori-go-console
+        
+    - name: Upload binary artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: yatori-binaries
+        path: ../yatori-go-core/yatori-go-console-arm64
+        retention-days: 7
+        
+    - name: Grant execute permission for gradlew
+      run: chmod +x gradlew
         
     - name: Build with Gradle
       run: ./gradlew build --stacktrace
