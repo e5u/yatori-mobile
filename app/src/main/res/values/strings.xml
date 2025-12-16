@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App Name -->
+    <string name="app_name">Yatori Mobile</string>
+
+    <!-- Activity Titles -->
+    <string name="title_log_viewer">Log Viewer</string>
+    <string name="title_settings">Settings</string>
+
+    <!-- Main Activity -->
+    <string name="status_binary_ready">Binary Ready</string>
+    <string name="status_binary_missing">Binary Missing</string>
+    <string name="status_binary_checking">Checking Binary…</string>
+    <string name="status_running">Running</string>
+    <string name="status_stopped">Stopped</string>
+    
+    <string name="button_start_execution">Start Execution</string>
+    <string name="button_stop_execution">Stop Execution</string>
+    <string name="button_view_logs">View Logs</string>
+    <string name="button_settings">Settings</string>
+    
+    <string name="label_binary_status">Binary Status</string>
+    <string name="label_execution_status">Execution Status</string>
+    <string name="label_recent_activity">Recent Activity</string>
+    
+    <string name="desc_no_recent_activity">No recent activity</string>
+
+    <!-- Log Viewer -->
+    <string name="button_export_logs">Export Logs</string>
+    <string name="button_clear_logs">Clear Logs</string>
+    <string name="button_search">Search</string>
+    <string name="hint_search_logs">Search logs…</string>
+    <string name="label_no_logs">No logs available</string>
+    <string name="label_logs_cleared">Logs cleared</string>
+    <string name="label_logs_exported">Logs exported</string>
+
+    <!-- Settings -->
+    <string name="pref_category_general">General</string>
+    <string name="pref_category_execution">Execution</string>
+    <string name="pref_category_logs">Logs</string>
+    <string name="pref_category_about">About</string>
+    
+    <string name="pref_title_notifications">Enable Notifications</string>
+    <string name="pref_summary_notifications">Show notifications for execution status</string>
+    
+    <string name="pref_title_auto_start">Auto Start</string>
+    <string name="pref_summary_auto_start">Automatically start execution on app launch</string>
+    
+    <string name="pref_title_keep_logs">Keep Logs</string>
+    <string name="pref_summary_keep_logs">Number of days to keep logs</string>
+    
+    <string name="pref_title_log_level">Log Level</string>
+    <string name="pref_summary_log_level">Set the verbosity of logs</string>
+    
+    <string name="pref_title_version">Version</string>
+    <string name="pref_summary_version">1.0.0</string>
+    
+    <string name="pref_title_licenses">Open Source Licenses</string>
+    <string name="pref_summary_licenses">View licenses of used libraries</string>
+
+    <!-- Binary Manager -->
+    <string name="error_binary_not_found">Binary not found in assets</string>
+    <string name="error_binary_extraction">Failed to extract binary</string>
+    <string name="error_binary_permissions">Failed to set executable permissions</string>
+    <string name="error_unsupported_architecture">Unsupported device architecture: %s</string>
+    <string name="info_binary_extracted">Binary extracted successfully</string>
+    <string name="info_binary_verified">Binary verified</string>
+
+    <!-- Execution Service -->
+    <string name="notification_channel_name">Yatori Execution</string>
+    <string name="notification_channel_desc">Notifications for binary execution status</string>
+    <string name="notification_title_running">Yatori is running</string>
+    <string name="notification_title_completed">Yatori completed</string>
+    <string name="notification_title_failed">Yatori failed</string>
+    <string name="notification_content_running">Execution in progress…</string>
+    <string name="notification_content_completed">Execution completed successfully</string>
+    <string name="notification_content_failed">Execution failed with error</string>
+    <string name="notification_action_stop">Stop</string>
+    <string name="notification_action_view">View</string>
+
+    <!-- Permissions -->
+    <string name="permission_title_storage">Storage Permission Required</string>
+    <string name="permission_message_storage">Storage permission is needed to save and read logs</string>
+    <string name="permission_title_notification">Notification Permission Required</string>
+    <string name="permission_message_notification">Notification permission is needed to show execution status</string>
+    <string name="button_grant_permission">Grant Permission</string>
+    <string name="button_cancel">Cancel</string>
+
+    <!-- Errors -->
+    <string name="error_generic">An error occurred: %s</string>
+    <string name="error_no_storage_permission">Storage permission denied</string>
+    <string name="error_execution_failed">Execution failed</string>
+    <string name="error_log_export_failed">Failed to export logs</string>
+    <string name="error_log_read_failed">Failed to read logs</string>
+
+    <!-- Messages -->
+    <string name="message_execution_started">Execution started</string>
+    <string name="message_execution_stopped">Execution stopped</string>
+    <string name="message_processing">Processing…</string>
+
+    <!-- Dialogs -->
+    <string name="dialog_title_confirm">Confirm</string>
+    <string name="dialog_message_clear_logs">Are you sure you want to clear all logs?</string>
+    <string name="dialog_message_stop_execution">Are you sure you want to stop execution?</string>
+    <string name="button_yes">Yes</string>
+    <string name="button_no">No</string>
+
+    <!-- Content Descriptions -->
+    <string name="cd_fab_action">Main action</string>
+    <string name="cd_status_icon">Status icon</string>
+    <string name="cd_menu">Menu</string>
+    
+</resources>

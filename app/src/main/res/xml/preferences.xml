@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory
+        app:title="@string/pref_category_general"
+        app:iconSpaceReserved="false">
+
+        <SwitchPreferenceCompat
+            app:key="notifications_enabled"
+            app:title="@string/pref_title_notifications"
+            app:summary="@string/pref_summary_notifications"
+            app:defaultValue="true"
+            app:iconSpaceReserved="false" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:title="@string/pref_category_execution"
+        app:iconSpaceReserved="false">
+
+        <SwitchPreferenceCompat
+            app:key="auto_start"
+            app:title="@string/pref_title_auto_start"
+            app:summary="@string/pref_summary_auto_start"
+            app:defaultValue="false"
+            app:iconSpaceReserved="false" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:title="@string/pref_category_logs"
+        app:iconSpaceReserved="false">
+
+        <ListPreference
+            app:key="keep_logs_days"
+            app:title="@string/pref_title_keep_logs"
+            app:summary="@string/pref_summary_keep_logs"
+            app:entries="@array/keep_logs_entries"
+            app:entryValues="@array/keep_logs_values"
+            app:defaultValue="7"
+            app:iconSpaceReserved="false" />
+
+        <ListPreference
+            app:key="log_level"
+            app:title="@string/pref_title_log_level"
+            app:summary="@string/pref_summary_log_level"
+            app:entries="@array/log_level_entries"
+            app:entryValues="@array/log_level_values"
+            app:defaultValue="info"
+            app:iconSpaceReserved="false" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:title="@string/pref_category_about"
+        app:iconSpaceReserved="false">
+
+        <Preference
+            app:key="version"
+            app:title="@string/pref_title_version"
+            app:summary="@string/pref_summary_version"
+            app:selectable="false"
+            app:iconSpaceReserved="false" />
+
+        <Preference
+            app:key="licenses"
+            app:title="@string/pref_title_licenses"
+            app:summary="@string/pref_summary_licenses"
+            app:iconSpaceReserved="false" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

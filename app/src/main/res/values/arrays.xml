@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Keep Logs Days -->
+    <string-array name="keep_logs_entries">
+        <item>1 Day</item>
+        <item>3 Days</item>
+        <item>7 Days</item>
+        <item>14 Days</item>
+        <item>30 Days</item>
+        <item>Forever</item>
+    </string-array>
+
+    <string-array name="keep_logs_values">
+        <item>1</item>
+        <item>3</item>
+        <item>7</item>
+        <item>14</item>
+        <item>30</item>
+        <item>0</item>
+    </string-array>
+
+    <!-- Log Level -->
+    <string-array name="log_level_entries">
+        <item>Debug</item>
+        <item>Info</item>
+        <item>Warning</item>
+        <item>Error</item>
+    </string-array>
+
+    <string-array name="log_level_values">
+        <item>debug</item>
+        <item>info</item>
+        <item>warning</item>
+        <item>error</item>
+    </string-array>
+</resources>

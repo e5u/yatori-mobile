@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<full-backup-content>
+    <!-- Exclude logs from backup -->
+    <exclude domain="file" path="logs/"/>
+    <!-- Exclude cache -->
+    <exclude domain="cache" path="."/>
+</full-backup-content>
