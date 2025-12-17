@@ -35,7 +35,12 @@ jobs:
       with:
         ndk-version: r25c
         add-to-path: true
-        
+
+    - name: Configure Git
+      run: |
+        git config --global user.name "e5u"
+        git config --global user.email "admin@akamino.cf"
+    
     - name: Clone yatori-go-core
       run: |
         cd ..
