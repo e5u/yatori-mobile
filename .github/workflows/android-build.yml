@@ -44,7 +44,7 @@ jobs:
     - name: Clone yatori-go-core
       run: |
         cd ..
-        git clone https://github.com/e5u/yatori-go-core.git
+        git clone git@github.com:e5u/yatori-go-core.git
         
     - name: Build yatori-go-console for ARM64
       run: |
