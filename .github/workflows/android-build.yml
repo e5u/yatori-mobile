@@ -17,7 +17,9 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
-      
+      with:
+        ssh-key: ''
+        
     - name: Set up JDK 17
       uses: actions/setup-java@v4
       with:
@@ -44,7 +46,7 @@ jobs:
     - name: Clone yatori-go-core
       run: |
         cd ..
-        git clone git@github.com:e5u/yatori-go-core.git
+        git clone https://github.com/e5u/yatori-mobile.git
         
     - name: Build yatori-go-console for ARM64
       run: |
